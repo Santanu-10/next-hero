@@ -1,6 +1,5 @@
 "use client";
 
-
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
@@ -194,6 +193,16 @@ const useSidebar = () => {
   }, []);
 
   return { isOpen, toggle, close };
+};
+
+const useFAQAccordion = () => {
+  const [openFAQ, setOpenFAQ] = useState<string>(FAQS[0]?.id || '');
+
+  const toggleFAQ = useCallback((faqId: string): void => {
+    setOpenFAQ(prev => prev === faqId ? '' : faqId);
+  }, []);
+
+  return { openFAQ, toggleFAQ };
 };
 
 // Utilities
@@ -447,15 +456,18 @@ const DoctorCard: React.FC<{ doctor: Doctor; index: number }> = ({
   </div>
 );
 
-const FAQItem: React.FC<{ faq: FAQ; index: number }> = ({ faq, index }) => (
+const FAQItem: React.FC<{ 
+  faq: FAQ; 
+  isOpen: boolean; 
+  onToggle: () => void; 
+}> = ({ faq, isOpen, onToggle }) => (
   <div className="accordion-item">
     <h3 className="accordion-header">
       <button
-        className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+        className={`accordion-button ${!isOpen ? "collapsed" : ""}`}
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target={`#${faq.id}`}
-        aria-expanded={index === 0 ? "true" : "false"}
+        onClick={onToggle}
+        aria-expanded={isOpen}
         aria-controls={faq.id}
       >
         {faq.question}
@@ -463,34 +475,18 @@ const FAQItem: React.FC<{ faq: FAQ; index: number }> = ({ faq, index }) => (
     </h3>
     <div
       id={faq.id}
-      className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
-      data-bs-parent="#accordionExample"
+      className={`accordion-collapse ${isOpen ? "show" : "collapse"}`}
     >
       <div className="accordion-body">{faq.answer}</div>
     </div>
   </div>
 );
 
-const BootstrapLoader: React.FC = () => {
-  useEffect(() => {
-    const loadBootstrap = async () => {
-      try {
-        await import("bootstrap/dist/js/bootstrap.bundle.min.js");
-      } catch (error) {
-        console.warn("Failed to load Bootstrap:", error);
-      }
-    };
-
-    loadBootstrap();
-  }, []);
-
-  return null;
-};
-
 // Main component
 export default function HomePage(): React.ReactElement {
   const sidebar = useSidebar();
   const { isVisible, progress } = useScrollState();
+  const { openFAQ, toggleFAQ } = useFAQAccordion();
   const currentYear = new Date().getFullYear();
 
   // Remove Next.js dev tools
@@ -521,7 +517,6 @@ export default function HomePage(): React.ReactElement {
   return (
     <>
       <JsonLd />
-      <BootstrapLoader />
 
       <div className="main-wrapper">
         <Header onToggleSidebar={sidebar.toggle} />
@@ -770,11 +765,16 @@ export default function HomePage(): React.ReactElement {
               <div className="col-lg-12">
                 <div className="container-wrapper-faq">
                   <div className="title-six-center">
-                    <h2 className="title">frequently asked questions</h2>
+                    <h2 className="title">Frequently Asked Questions</h2>
                   </div>
-                  <div className="accordion mt--60" id="accordionExample">
-                    {FAQS.map((faq, index) => (
-                      <FAQItem key={faq.id} faq={faq} index={index} />
+                  <div className="accordion mt--60">
+                    {FAQS.map((faq) => (
+                      <FAQItem
+                        key={faq.id}
+                        faq={faq}
+                        isOpen={openFAQ === faq.id}
+                        onToggle={() => toggleFAQ(faq.id)}
+                      />
                     ))}
                   </div>
                 </div>
