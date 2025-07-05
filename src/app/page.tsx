@@ -1,10 +1,12 @@
 "use client";
 
+
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { JsonLd } from "./components/JsonLd";
 import React from "react";
+
 // Types
 interface ScrollState {
   isVisible: boolean;
@@ -37,47 +39,56 @@ const SERVICES: Service[] = [
   {
     icon: "/assets/images/calendar.png",
     title: "Effortless Patient Booking",
-    description: "Simplify patient appointments with our seamless booking system, ensuring minimal waiting times and maximum efficiency.",
+    description:
+      "Simplify patient appointments with our seamless booking system, ensuring minimal waiting times and maximum efficiency.",
   },
   {
     icon: "/assets/images/telemedicine.png",
     title: "Seamless Appointment",
-    description: "Organize and manage appointments with an intuitive interface, reducing scheduling conflicts and enhancing patient satisfaction.",
+    description:
+      "Organize and manage appointments with an intuitive interface, reducing scheduling conflicts and enhancing patient satisfaction.",
   },
   {
     icon: "/assets/images/patient-record.png",
     title: "Seamless Patient Registration",
-    description: "Fast and hassle-free patient registration, enabling clinics to maintain accurate medical records with ease.",
+    description:
+      "Fast and hassle-free patient registration, enabling clinics to maintain accurate medical records with ease.",
   },
   {
     icon: "/assets/images/appointment.png",
     title: "Doctor Schedule Optimization",
-    description: "Efficiently manage doctors' availability, appointments, and schedules to maximize productivity and patient care.",
+    description:
+      "Efficiently manage doctors' availability, appointments, and schedules to maximize productivity and patient care.",
   },
   {
     icon: "/assets/images/health-report.png",
     title: "Voice Based Prescription",
-    description: "Revolutionize prescription writing with advanced voice recognition, allowing doctors to dictate prescriptions hands-free.",
+    description:
+      "Revolutionize prescription writing with advanced voice recognition, allowing doctors to dictate prescriptions hands-free.",
   },
   {
     icon: "/assets/images/translation.png",
     title: "Multilingual Prescriptions",
-    description: "Generate prescriptions in various Indian languages, ensuring better understanding and accessibility for patients.",
+    description:
+      "Generate prescriptions in various Indian languages, ensuring better understanding and accessibility for patients.",
   },
   {
     icon: "/assets/images/layout.png",
     title: "Smart Prescription Templates",
-    description: "Speed up prescriptions with reusable templates. Fill once, save, and reuse anytime with just a click.",
+    description:
+      "Speed up prescriptions with reusable templates. Fill once, save, and reuse anytime with just a click.",
   },
   {
     icon: "/assets/images/notification.png",
     title: "Chat with Patients in One Place",
-    description: "Respond to patient messages directly from Vaidya Barta. No need to switch apps or check your phone.",
+    description:
+      "Respond to patient messages directly from Vaidya Barta. No need to switch apps or check your phone.",
   },
   {
     icon: "/assets/images/upload.png",
     title: "Convert Paper Records to Appointments",
-    description: "Easily upload handwritten patient lists—Vaidya Barta smartly converts them into digital appointments in a few clicks.",
+    description:
+      "Easily upload handwritten patient lists—Vaidya Barta smartly converts them into digital appointments in a few clicks.",
   },
 ];
 
@@ -110,27 +121,32 @@ const FAQS: FAQ[] = [
   {
     id: "collapseOne",
     question: "What is Vaidya Barta?",
-    answer: "Vaidya Barta is an advanced clinic management software designed to streamline patient bookings, doctor schedules, and prescription generation, making healthcare administration efficient and hassle-free.",
+    answer:
+      "Vaidya Barta is an advanced clinic management software designed to streamline patient bookings, doctor schedules, and prescription generation, making healthcare administration efficient and hassle-free.",
   },
   {
     id: "collapseTwo",
     question: "Who should be using Vaidya Barta?",
-    answer: "Doctors, clinic administrators, and healthcare facilities can benefit from using Vaidya Barta to manage patient records, appointments, and prescriptions seamlessly.",
+    answer:
+      "Doctors, clinic administrators, and healthcare facilities can benefit from using Vaidya Barta to manage patient records, appointments, and prescriptions seamlessly.",
   },
   {
     id: "collapseThree",
     question: "How should I use Vaidya Barta for my clinic?",
-    answer: "Simply register your clinic on our platform, configure your settings, and start managing patient bookings, doctor schedules, and prescriptions with ease.",
+    answer:
+      "Simply register your clinic on our platform, configure your settings, and start managing patient bookings, doctor schedules, and prescriptions with ease.",
   },
   {
     id: "collapseFour",
     question: "How long does it take to set up Vaidya Barta?",
-    answer: "Vaidya Barta is designed for quick deployment. Most clinics can set up their account and start using the system within a few hours.",
+    answer:
+      "Vaidya Barta is designed for quick deployment. Most clinics can set up their account and start using the system within a few hours.",
   },
   {
     id: "collapseFive",
     question: "Can I use Vaidya Barta on my Laptop, Mobile, Tablet?",
-    answer: "Yes! Vaidya Barta is a cloud-based platform accessible from laptops, mobiles, and tablets, allowing you to manage your clinic from anywhere. To Start with Doctors are requested to use on laptop/desktop and clinic assistants on mobile.",
+    answer:
+      "Yes! Vaidya Barta is a cloud-based platform accessible from laptops, mobiles, and tablets, allowing you to manage your clinic from anywhere. To Start with Doctors are requested to use on laptop/desktop and clinic assistants on mobile.",
   },
 ];
 
@@ -199,8 +215,8 @@ const ScrollToTopButton: React.FC<{
 
   return (
     <div className={`scroll-to-top ${isVisible ? "visible" : ""}`}>
-      <button 
-        onClick={scrollToTop} 
+      <button
+        onClick={scrollToTop}
         aria-label="Scroll to top of page"
         type="button"
       >
@@ -228,7 +244,9 @@ const ScrollToTopButton: React.FC<{
             }}
           />
         </svg>
-        <span className="arrow" aria-hidden="true">▲</span>
+        <span className="arrow" aria-hidden="true">
+          ▲
+        </span>
       </button>
     </div>
   );
@@ -238,8 +256,8 @@ const MobileSidebar: React.FC<{
   isOpen: boolean;
   onClose: () => void;
 }> = ({ isOpen, onClose }) => (
-  <nav 
-    id="side-bar" 
+  <nav
+    id="side-bar"
     className={`side-bar header-two ${isOpen ? "open" : ""}`}
     aria-label="Mobile navigation menu"
     role="navigation"
@@ -295,7 +313,11 @@ const Header: React.FC<{
         <div className="col-lg-12">
           <div className="header-wrapper-1">
             <div className="logo-area-start">
-              <Link href="/" className="logo under-line-btn" aria-label="Vaidya Barta - Home">
+              <Link
+                href="/"
+                className="logo under-line-btn"
+                aria-label="Vaidya Barta - Home"
+              >
                 <Image
                   src="/assets/images/dr_logo_1.png"
                   alt="Vaidya Barta - Clinic Management Software Logo"
@@ -313,7 +335,11 @@ const Header: React.FC<{
                   priority
                 />
               </Link>
-              <nav className="nav-area" role="navigation" aria-label="Main navigation">
+              <nav
+                className="nav-area"
+                role="navigation"
+                aria-label="Main navigation"
+              >
                 <ul>
                   <li className="main-nav menu-item-open">
                     <Link href="#introduction">Home</Link>
@@ -335,15 +361,15 @@ const Header: React.FC<{
             </div>
             <div className="header-right">
               <Link
-                href="https://vaidyabarta.com/doctor-login"
+                href="https://dr.vaidyabarta.com/doctor-login"
                 className="rts-btn btn-primary btn-transparent under-line-btn"
                 aria-label="Try Vaidya Barta for free"
               >
                 Try For Free
               </Link>
-              <button 
-                className="menu-btn" 
-                id="menu-btn" 
+              <button
+                className="menu-btn"
+                id="menu-btn"
                 onClick={onToggleSidebar}
                 aria-label="Open mobile menu"
                 aria-expanded="false"
@@ -370,7 +396,10 @@ const Header: React.FC<{
   </header>
 );
 
-const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
+const ServiceCard: React.FC<{ service: Service; index: number }> = ({
+  service,
+  index,
+}) => (
   <div
     className={`col-lg-3 col-md-6 col-sm-6 wow fadeInUp`}
     data-wow-delay={`.${2 + (index % 4) * 2}s`}
@@ -392,7 +421,10 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
   </div>
 );
 
-const DoctorCard: React.FC<{ doctor: Doctor; index: number }> = ({ doctor, index }) => (
+const DoctorCard: React.FC<{ doctor: Doctor; index: number }> = ({
+  doctor,
+  index,
+}) => (
   <div
     className={`col-lg-3 col-md-6 col-sm-6 col-12 mb_md--50 mb_sm--50 fadeInLeft wow`}
     data-wow-duration="1s"
@@ -443,7 +475,7 @@ const BootstrapLoader: React.FC = () => {
   useEffect(() => {
     const loadBootstrap = async () => {
       try {
-        // await import("bootstrap/dist/js/bootstrap.bundle.min.js");
+        await import("bootstrap/dist/js/bootstrap.bundle.min.js");
       } catch (error) {
         console.warn("Failed to load Bootstrap:", error);
       }
@@ -463,25 +495,25 @@ export default function HomePage(): React.ReactElement {
 
   // Remove Next.js dev tools
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === "development") {
       const removeDevTools = () => {
         const selectors = [
-          '[data-nextjs-toast-wrapper]',
-          '[data-next-badge-root]',
-          '[data-nextjs-dev-tools-button]',
+          "[data-nextjs-toast-wrapper]",
+          "[data-next-badge-root]",
+          "[data-nextjs-dev-tools-button]",
           'button[aria-label*="Next.js"]',
-          'div[style*="--size: 36px"]'
+          'div[style*="--size: 36px"]',
         ];
-        
-        selectors.forEach(selector => {
+
+        selectors.forEach((selector) => {
           const elements = document.querySelectorAll(selector);
-          elements.forEach(element => element.remove());
+          elements.forEach((element) => element.remove());
         });
       };
-      
+
       removeDevTools();
       const interval = setInterval(removeDevTools, 1000);
-      
+
       return () => clearInterval(interval);
     }
   }, []);
@@ -490,7 +522,7 @@ export default function HomePage(): React.ReactElement {
     <>
       <JsonLd />
       <BootstrapLoader />
-      
+
       <div className="main-wrapper">
         <Header onToggleSidebar={sidebar.toggle} />
 
@@ -502,17 +534,20 @@ export default function HomePage(): React.ReactElement {
                 <div className="inner-content-banner">
                   <div className="content-wrapper">
                     <div className="pre-title wow fadeInUp">
-                      <span>Vaidya Barta : Smart, Seamless Clinic Management</span>
+                      <span>
+                        Vaidya Barta : Smart, Seamless Clinic Management
+                      </span>
                     </div>
                     <h1 className="title move-right wow">Prioritize Health</h1>
                     <p className="disc move-right">
-                      <strong>Vaidya Barta</strong> simplifies healthcare operations with automation and
-                      intuitive tools, enabling effortless appointment booking,
-                      multilingual prescriptions, and optimized workflows—so you
-                      can focus on quality patient care.
+                      <strong>Vaidya Barta</strong> simplifies healthcare
+                      operations with automation and intuitive tools, enabling
+                      effortless appointment booking, multilingual
+                      prescriptions, and optimized workflows—so you can focus on
+                      quality patient care.
                     </p>
                     <Link
-                      href="https://vaidyabarta.com/doctor-login"
+                      href="https://dr.vaidyabarta.com/doctor-login"
                       className="rts-btn btn-primary btn-white move-right under-line-btn"
                       aria-label="Get started with Vaidya Barta clinic management"
                     >
@@ -591,7 +626,10 @@ export default function HomePage(): React.ReactElement {
                       <div className="wrapper">
                         {[...Array(5)].map((_, index) => (
                           <div key={index} className="single">
-                            <i className="fa-sharp fa-solid fa-star" aria-hidden="true"></i>
+                            <i
+                              className="fa-sharp fa-solid fa-star"
+                              aria-hidden="true"
+                            ></i>
                           </div>
                         ))}
                       </div>
@@ -649,17 +687,33 @@ export default function HomePage(): React.ReactElement {
                     services.
                   </h2>
                   <ul className="feature-list">
-                    <li>Prescriptions available in multiple Indian languages for diverse patient needs.</li>
-                    <li>Easily generate prescriptions within the clinic workflow.</li>
-                    <li>Paperless prescriptions for easy access and sharing.</li>
-                    <li>Manage doctor availability with a flexible calendar.</li>
-                    <li>Effortless booking with automated reminders for a seamless patient experience.</li>
+                    <li>
+                      Prescriptions available in multiple Indian languages for
+                      diverse patient needs.
+                    </li>
+                    <li>
+                      Easily generate prescriptions within the clinic workflow.
+                    </li>
+                    <li>
+                      Paperless prescriptions for easy access and sharing.
+                    </li>
+                    <li>
+                      Manage doctor availability with a flexible calendar.
+                    </li>
+                    <li>
+                      Effortless booking with automated reminders for a seamless
+                      patient experience.
+                    </li>
                   </ul>
                 </div>
               </div>
 
               {SERVICES.map((service, index) => (
-                <ServiceCard key={service.title} service={service} index={index} />
+                <ServiceCard
+                  key={service.title}
+                  service={service}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -738,7 +792,7 @@ export default function HomePage(): React.ReactElement {
                   <span className="pre">Try For Free</span>
                   <h2 className="title">Request To Use Our Application</h2>
                   <Link
-                    href="https://vaidyabarta.com/doctor-login"
+                    href="https://dr.vaidyabarta.com/doctor-login"
                     className="rts-btn btn-primary under-line-btn"
                     aria-label="Get started with Vaidya Barta free trial"
                   >
@@ -780,8 +834,8 @@ export default function HomePage(): React.ReactElement {
                       >
                         help@vaidyabarta.com
                       </a>
-                      <a 
-                        className="under-line-btn" 
+                      <a
+                        className="under-line-btn"
                         href="tel:+919831036295"
                         aria-label="Call Vaidya Barta support"
                       >
@@ -793,11 +847,21 @@ export default function HomePage(): React.ReactElement {
                     <h6 className="title">Quick Links</h6>
                     <nav className="body">
                       <ul className="nav-bottom">
-                        <li><Link href="#introduction">Home</Link></li>
-                        <li><Link href="#all-features">Features</Link></li>
-                        <li><Link href="#doctors">Our Doctors</Link></li>
-                        <li><Link href="#faq">FAQ</Link></li>
-                        <li><Link href="#contact">Contact Us</Link></li>
+                        <li>
+                          <Link href="#introduction">Home</Link>
+                        </li>
+                        <li>
+                          <Link href="#all-features">Features</Link>
+                        </li>
+                        <li>
+                          <Link href="#doctors">Our Doctors</Link>
+                        </li>
+                        <li>
+                          <Link href="#faq">FAQ</Link>
+                        </li>
+                        <li>
+                          <Link href="#contact">Contact Us</Link>
+                        </li>
                       </ul>
                     </nav>
                   </div>
@@ -805,8 +869,14 @@ export default function HomePage(): React.ReactElement {
                     <h6 className="title">Legal Policies</h6>
                     <nav className="body">
                       <ul className="nav-bottom">
-                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                        <li><Link href="/terms-conditions">Terms & Conditions</Link></li>
+                        <li>
+                          <Link href="/privacy-policy">Privacy Policy</Link>
+                        </li>
+                        <li>
+                          <Link href="/terms-conditions">
+                            Terms & Conditions
+                          </Link>
+                        </li>
                       </ul>
                     </nav>
                   </div>

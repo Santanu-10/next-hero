@@ -105,19 +105,11 @@ export const metadata: Metadata = {
   // Manifest
   manifest: "/manifest.json",
 
-  // Icons
+  // Icons - FIXED: Single favicon configuration with cache busting
   icons: {
-    icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    other: [
-      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#615EFC" },
-    ],
+    icon: "/assets/images/favicon.png?v=2024",
+    shortcut: "/assets/images/favicon.png?v=2024",
+    apple: "/assets/images/favicon.png?v=2024",
   },
 };
 
@@ -162,6 +154,8 @@ export default function RootLayout({
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#615EFC" />
         <meta name="msapplication-TileColor" content="#615EFC" />
+
+        {/* REMOVED: Conflicting manual favicon links - using metadata instead */}
 
         {/* Additional meta tags for better SEO */}
         <meta name="mobile-web-app-capable" content="yes" />
