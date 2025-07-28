@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /
+Allow: /#introduction
+Allow: /#all-features
+Allow: /#doctors
+Allow: /#faq
+
+# Sitemap
+Sitemap: https://vaidyabarta.com/sitemap.xml
+
+# Block development and API files
+Disallow: /_next/
+Disallow: /api/
+Disallow: *.json$
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Block specific bots (if needed)
+# User-agent: BadBot
+# Disallow: /

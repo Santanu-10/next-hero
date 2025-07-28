@@ -1,0 +1,47 @@
+@import '../assets/css/Home.css';
+
+
+
+
+/* Fix for animations */
+.wow {
+  visibility: visible !important;
+}
+
+
+
+/* Your scroll button styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Add animation keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.wow.fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+.wow.fadeInLeft { animation: fadeInLeft 0.8s ease forwards; }
+.wow.zoomIn { animation: zoomIn 0.8s ease forwards; }
