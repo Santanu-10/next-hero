@@ -104,9 +104,9 @@ export default function PrivacyPolicy() {
           >
             This Privacy Policy describes how{" "}
             <strong>YEM SOFTWARE INNOVATIONS PRIVATE LIMITED</strong> and its
-            affiliates (collectively "YEM SOFTWARE INNOVATIONS PRIVATE LIMITED,
-            we, our, us") collect, use, share, protect or otherwise process your
-            information/personal data through our website
+            affiliates (collectively &quot;YEM SOFTWARE INNOVATIONS PRIVATE
+            LIMITED, we, our, us&quot;) collect, use, share, protect or
+            otherwise process your information/personal data through our website
             <span style={{ color: "#4299e1", fontWeight: 600 }}>
               {" "}
               https://vaidyabarta.com
@@ -480,9 +480,9 @@ export default function PrivacyPolicy() {
             and/or e-mail for the purposes specified in this Privacy Policy. You
             have an option to withdraw your consent that you have already
             provided by writing to the Grievance Officer at the contact
-            information provided below. Please mention "Withdrawal of consent
-            for processing personal data" in your subject line of your
-            communication.
+            information provided below. Please mention &quot;Withdrawal of
+            consent for processing personal data&quot; in your subject line of
+            your communication.
           </p>
         </section>
 

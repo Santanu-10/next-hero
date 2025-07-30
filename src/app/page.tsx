@@ -994,7 +994,7 @@ export default function HomePage(): React.ReactElement {
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Automatic WhatsApp language translation(English -> Any India Language)</span>
+                        <span>Automatic WhatsApp language translation(English - Any India Language)</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
