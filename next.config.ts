@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   
-  // Add trailing slash
+  // Comment out or remove this line temporarily
   trailingSlash: true,
   
   // Basic environment

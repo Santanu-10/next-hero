@@ -332,18 +332,18 @@ const Header: React.FC<{
               aria-label="Vaidya Barta - Home"
             >
               <Image
-                src="/assets/images/dr_logo_1.png"
+                src="/assets/images/main_logo.png"
                 alt="Vaidya Barta - Clinic Management Software Logo"
                 className="desktop-logo"
-                width={110}
+                width={250}
                 height={60}
                 priority
               />
               <Image
-                src="/assets/images/dr_logo_1.png"
+                src="/assets/images/a.png"
                 alt="Vaidya Barta Logo"
                 className="mobile-logo"
-                width={85}
+                width={150}
                 height={45}
                 priority
               />
@@ -377,6 +377,7 @@ const Header: React.FC<{
               </nav>
             </div>
             <div className="header-right">
+              <div className="btn-hide">
               <Link
                 href="https://dr.vaidyabarta.com/doctor-login"
                 className="rts-btn btn-primary btn-transparent under-line-btn"
@@ -384,6 +385,7 @@ const Header: React.FC<{
               >
                 Try For Free
               </Link>
+              </div>
               <button
                 className="menu-btn"
                 id="menu-btn"
@@ -767,7 +769,7 @@ export default function HomePage(): React.ReactElement {
         </section>
 
         {/* Pricing Section */}
-        <section id="all-plans" className="rts-about-area  ">
+        <section id="all-plans" className="rts-about-area">
           <div className="pricing-area-start rts-section-gapBottom">
             <div className="container">
               <div className="row">
@@ -777,134 +779,240 @@ export default function HomePage(): React.ReactElement {
                     <h2 className="title text-center">
                       Simple, Transparent Pricing
                     </h2>
+                    <p
+                      style={{
+                        display: "inline-block",
+                        padding: "6px 12px",
+                        backgroundColor: "#e0f2fe",
+                        color: "#0284c7",
+                        fontWeight: 400,
+                        fontSize: "13px",
+                        borderRadius: "8px",
+                        border: "1px dashed #bae6fd",
+                        fontFamily: "'Rubik', sans-serif",
+                        margin: 0
+                      }}
+                    >
+                      From the moment a doctor registers, they will receive one month of full, unrestricted access to all premium plan features. Experience the complete suite of tools and services, with no hidden fees or limitations.                    </p>
+
                   </div>
                 </div>
               </div>
-              <div className="row g-75 mt--0">
+              <div className="row g-75  justify-content-center align-items-stretch" style={{ display: 'flex', marginTop: '20px' }}>
+
+                {/* Basic Plan - Left */}
                 <div
                   className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".2s"
                   data-wow-duration=".8s"
+                  style={{ display: 'flex' }}
                 >
                   <div
-                    className={`single-pricing-area ${
-                      activePlan === "basic" ? "active" : ""
-                    }`}
+                    className={`single-pricing-area ${activePlan === "basic" ? "active" : ""
+                      }`}
                     onClick={() => setActivePlan("basic")}
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%'
+                    }}
                   >
                     <div className="pricing-head">
                       <span>Basic Plan</span>
-                      <h2 className="price">₹5/-</h2>
+                      <h2 className="price">₹6/-</h2>
                       <p>Per Prescription</p>
                     </div>
-                    <div className="body">
-                      <p className="disc">
-                        Perfect for solo practitioners starting their digital
-                        journey
-                      </p>
+                    <div className="body" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
+
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Echocardiogram</span>
+                        <span>Unlimited patient records.</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Stress Testing</span>
+                        <span>Assistant/Clinic Access Included.</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Cardiac Catheterization</span>
+                        <span>Patient Online Self Booking Include.</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Angioplasty and Stenting</span>
+                        <span>Quick Prescription Generation.</span>
                       </div>
-                      <a href="#" className="rts-btn btn-primary">
-                        Booking Now
-                      </a>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>Unlimited Quick Prescription Templates.</span>
+                      </div>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>Multilingual Prescription Supported.</span>
+                      </div>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>22 Indian Languages Supported.</span>
+                      </div>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>
+                          Instant access to past visit records/prescription.
+                        </span>
+                      </div>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>Share Prescription via WhatsApp.</span>
+                      </div>
+                      <div style={{ marginTop: 'auto' }}>
+                        <a href="#" className="rts-btn btn-primary">
+                          Booking Now
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                {/* Professional Plan - Center with Most Popular Badge */}
                 <div
                   className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".4s"
                   data-wow-duration=".8s"
+                  style={{ position: 'relative', display: 'flex' }}
                 >
                   <div
-                    className={`single-pricing-area ${
-                      activePlan === "silver" ? "active" : ""
-                    }`}
+                    className={`single-pricing-area ${activePlan === "silver" ? "active" : ""
+                      }`}
                     onClick={() => setActivePlan("silver")}
+                    style={{
+                      border: '2px solid #6366f1',
+                      transform: 'scale(1.05)',
+                      zIndex: 2,
+                      position: 'relative',
+                      width: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%'
+                    }}
                   >
+                    {/* Most Popular Badge */}
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '-15px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        backgroundColor: '#615EFC',
+                        color: 'white',
+                        padding: '8px 24px',
+                        borderRadius: '20px',
+                        fontSize: '16px',
+                        fontWeight: '400',
+                        zIndex: 3
+                      }}
+                    >
+                      Most Popular
+                    </div>
                     <div className="pricing-head">
                       <span>Professional Plan</span>
-                      <h2 className="price ">₹3/-</h2>
+                      <h2 className="price ">₹8/-</h2>
                       <p>Per Prescription</p>
                     </div>
-                    <div className="body">
-                      <p className="disc">
-                        Best for growing practices and small clinics
-                      </p>
+                    <div className="body" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
+
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Echocardiogram</span>
+                        <span>Everything in Basic Plan</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Stress Testing</span>
+                        <span>No typing - Speech to Text Prescription.</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Cardiac Catheterization</span>
+                        <span>
+                          Instant Alternative Medicine and Brand / Price
+                          comparison.
+                        </span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Angioplasty and Stenting</span>
+                        <span>
+                          Appointment Confirmation, Cancellation via WhatsApp.
+                        </span>
                       </div>
-                      <a href="#" className="rts-btn btn-primary">
-                        Booking Now
-                      </a>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>
+                          Advanced Analytics about Clinic and Performance.
+                        </span>
+                      </div>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>Priority Support within 12 hours.</span>
+                      </div>
+                      <div style={{ marginTop: 'auto' }}>
+                        <a href="#" className="rts-btn btn-primary">
+                          Booking Now
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                {/* Premium Plan - Right */}
                 <div
                   className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".6s"
                   data-wow-duration=".8s"
+                  style={{ display: 'flex' }}
                 >
                   <div
-                    className={`single-pricing-area ${
-                      activePlan === "gold" ? "active" : ""
-                    }`}
+                    className={`single-pricing-area ${activePlan === "gold" ? "active" : ""
+                      }`}
                     onClick={() => setActivePlan("gold")}
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%'
+                    }}
                   >
                     <div className="pricing-head">
-                      <span>Clinic Plan</span>
-                      <h2 className="price">₹2/-</h2>
+                      <span>Premium Plan</span>
+                      <h2 className="price">₹10/-</h2>
                       <p>Per Prescription</p>
                     </div>
-                    <div className="body">
-                      <p className="disc">
-                        Designed for multi-doctor clinics and healthcare centers{" "}
-                      </p>
+                    <div className="body" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
+
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Echocardiogram</span>
+                        <span>Everything on Professional Plan</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Stress Testing</span>
+                        <span>Unlimited Patient-Doctor communication via WhatsApp.</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Cardiac Catheterization</span>
+                        <span>Automatic WhatsApp language translation(English -> Any India Language)</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Angioplasty and Stenting</span>
+                        <span>Patient Report sharing via WhatsApp.</span>
                       </div>
-                      <a href="#" className="rts-btn btn-primary">
-                        Booking Now
-                      </a>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>Data migration from existing EMR.</span>
+                      </div>
+                      <div className="single-check">
+                        <Check className="check-icon" />
+                        <span>Priority Support within 2 hours.</span>
+                      </div>
+                      <div style={{ marginTop: 'auto' }}>
+                        <a href="#" className="rts-btn btn-primary">
+                          Booking Now
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1002,12 +1110,21 @@ export default function HomePage(): React.ReactElement {
               <div className="col-lg-12">
                 <div className="subscribe-area-start pb--30">
                   <Image
-                    src="/assets/images/dr_logo_1.png"
+                    src="/assets/images/main_logo.png"
                     alt="Vaidya Barta Logo"
-                    width={100}
-                    height={100}
+                    className="desktop-logo"
+                    width={250}
+                    height={250}
                     loading="lazy"
                   />
+                  <Image
+                src="/assets/images/a.png"
+                alt="Vaidya Barta Logo"
+                className="mobile-logo"
+                width={200}
+                height={200}
+                priority
+              />
                 </div>
               </div>
               <div className="col-lg-12">
@@ -1064,11 +1181,30 @@ export default function HomePage(): React.ReactElement {
                     <nav className="body">
                       <ul className="nav-bottom">
                         <li>
-                          <Link href="/privacy-policy">Privacy Policy</Link>
+                          <Link
+                            href="/privacy-policy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Privacy Policy
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/terms-conditions">
+                          <Link
+                            href="/terms-conditions"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             Terms & Conditions
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/refund-cancellation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Refund & Cancellation
                           </Link>
                         </li>
                       </ul>

@@ -4619,13 +4619,14 @@ textarea:-ms-input-placeholder {
 
 @media only screen and (max-width: 1199px) {
   .menu-btn {
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
     display: block;
     display: flex;
   }
   .menu-btn rect {
     fill: #fff;
   }
+ 
 }
 
 .submenu.parent-nav > li {
@@ -6192,6 +6193,9 @@ header .rts-btn {
 
 /* Hide desktop logo on mobile screens */
 @media (max-width: 768px) {
+  .btn-hide {
+    display: none;
+  }
   header .rts-btn {
     padding: 10px 20px;
   }
@@ -6199,13 +6203,16 @@ header .rts-btn {
     font-size: 14px;
   }
   .header-wrapper-1 .logo {
-    padding: 5px;
+    padding: 15px 10px;
   }
   .desktop-logo {
     display: none;
   }
   .mobile-logo {
     display: block;
+  }
+   .subscribe-area-start {
+    justify-content: center;
   }
 }
 /* Scroll To Top Button */
@@ -6292,14 +6299,14 @@ header .rts-btn {
 }
 .single-pricing-area .pricing-head {
   border-bottom: 1px solid #d8d8d8;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .single-pricing-area .pricing-head span {
   color: #111032;
   font-size: 18px;
   font-weight: 500;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   font-family: var(--font-secondary);
 }
@@ -6313,7 +6320,7 @@ header .rts-btn {
 
 .single-pricing-area .pricing-head p {
   color: #1f1f1f;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-family: var(--font-primary);
 }
 .single-pricing-area .body p {
@@ -6323,10 +6330,13 @@ header .rts-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 10px 0;
+  margin: 7px 0;
+}
+.single-pricing-area .single-check span {
+  font-size: 14px;
 }
 .single-pricing-area .rts-btn {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .g-75 {
   --bs-gutter-y: 30px !important;
@@ -6388,7 +6398,7 @@ header .rts-btn {
   border: 1px solid white;
   color: #fff;
 }
-.single-pricing-area.active .rts-btn.btn-primary:hover{
+.single-pricing-area.active .rts-btn.btn-primary:hover {
   border: 1px solid transparent;
 }
 
