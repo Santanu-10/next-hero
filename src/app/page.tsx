@@ -377,15 +377,14 @@ const Header: React.FC<{
               </nav>
             </div>
             <div className="header-right">
-              <div className="btn-hide">
               <Link
                 href="https://dr.vaidyabarta.com/doctor-login"
                 className="rts-btn btn-primary btn-transparent under-line-btn"
                 aria-label="Try Vaidya Barta for free"
               >
-                Try For Free
+                Try <span className="btn-hide">For</span> Free
               </Link>
-              </div>
+
               <button
                 className="menu-btn"
                 id="menu-btn"
@@ -790,32 +789,38 @@ export default function HomePage(): React.ReactElement {
                         borderRadius: "8px",
                         border: "1px dashed #bae6fd",
                         fontFamily: "'Rubik', sans-serif",
-                        margin: 0
+                        margin: 0,
                       }}
                     >
-                      From the moment a doctor registers, they will receive one month of full, unrestricted access to all premium plan features. Experience the complete suite of tools and services, with no hidden fees or limitations.                    </p>
-
+                      From the moment a doctor registers, they will receive one
+                      month of full, unrestricted access to all premium plan
+                      features. Experience the complete suite of tools and
+                      services, with no hidden fees or limitations.{" "}
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="row g-75  justify-content-center align-items-stretch" style={{ display: 'flex', marginTop: '20px' }}>
-
+              <div
+                className="row g-75  justify-content-center align-items-stretch"
+                style={{ display: "flex", marginTop: "20px" }}
+              >
                 {/* Basic Plan - Left */}
                 <div
                   className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".2s"
                   data-wow-duration=".8s"
-                  style={{ display: 'flex' }}
+                  style={{ display: "flex" }}
                 >
                   <div
-                    className={`single-pricing-area ${activePlan === "basic" ? "active" : ""
-                      }`}
+                    className={`single-pricing-area ${
+                      activePlan === "basic" ? "active" : ""
+                    }`}
                     onClick={() => setActivePlan("basic")}
                     style={{
-                      width: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      height: '100%'
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      height: "100%",
                     }}
                   >
                     <div className="pricing-head">
@@ -823,8 +828,14 @@ export default function HomePage(): React.ReactElement {
                       <h2 className="price">₹6/-</h2>
                       <p>Per Prescription</p>
                     </div>
-                    <div className="body" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
-
+                    <div
+                      className="body"
+                      style={{
+                        flex: "1",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
                       <div className="single-check">
                         <Check className="check-icon" />
                         <span>Unlimited patient records.</span>
@@ -863,7 +874,7 @@ export default function HomePage(): React.ReactElement {
                         <Check className="check-icon" />
                         <span>Share Prescription via WhatsApp.</span>
                       </div>
-                      <div style={{ marginTop: 'auto' }}>
+                      <div style={{ marginTop: "auto" }}>
                         <a href="#" className="rts-btn btn-primary">
                           Booking Now
                         </a>
@@ -877,37 +888,38 @@ export default function HomePage(): React.ReactElement {
                   className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".4s"
                   data-wow-duration=".8s"
-                  style={{ position: 'relative', display: 'flex' }}
+                  style={{ position: "relative", display: "flex" }}
                 >
                   <div
-                    className={`single-pricing-area ${activePlan === "silver" ? "active" : ""
-                      }`}
+                    className={`single-pricing-area ${
+                      activePlan === "silver" ? "active" : ""
+                    }`}
                     onClick={() => setActivePlan("silver")}
                     style={{
-                      border: '2px solid #6366f1',
-                      transform: 'scale(1.05)',
+                      border: "2px solid #6366f1",
+                      transform: "scale(1.05)",
                       zIndex: 2,
-                      position: 'relative',
-                      width: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      height: '100%'
+                      position: "relative",
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      height: "100%",
                     }}
                   >
                     {/* Most Popular Badge */}
                     <div
                       style={{
-                        position: 'absolute',
-                        top: '-15px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        backgroundColor: '#615EFC',
-                        color: 'white',
-                        padding: '8px 24px',
-                        borderRadius: '20px',
-                        fontSize: '16px',
-                        fontWeight: '400',
-                        zIndex: 3
+                        position: "absolute",
+                        top: "-15px",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        backgroundColor: "#615EFC",
+                        color: "white",
+                        padding: "8px 24px",
+                        borderRadius: "20px",
+                        fontSize: "16px",
+                        fontWeight: "400",
+                        zIndex: 3,
                       }}
                     >
                       Most Popular
@@ -917,8 +929,14 @@ export default function HomePage(): React.ReactElement {
                       <h2 className="price ">₹8/-</h2>
                       <p>Per Prescription</p>
                     </div>
-                    <div className="body" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
-
+                    <div
+                      className="body"
+                      style={{
+                        flex: "1",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
                       <div className="single-check">
                         <Check className="check-icon" />
                         <span>Everything in Basic Plan</span>
@@ -950,7 +968,7 @@ export default function HomePage(): React.ReactElement {
                         <Check className="check-icon" />
                         <span>Priority Support within 12 hours.</span>
                       </div>
-                      <div style={{ marginTop: 'auto' }}>
+                      <div style={{ marginTop: "auto" }}>
                         <a href="#" className="rts-btn btn-primary">
                           Booking Now
                         </a>
@@ -964,17 +982,18 @@ export default function HomePage(): React.ReactElement {
                   className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".6s"
                   data-wow-duration=".8s"
-                  style={{ display: 'flex' }}
+                  style={{ display: "flex" }}
                 >
                   <div
-                    className={`single-pricing-area ${activePlan === "gold" ? "active" : ""
-                      }`}
+                    className={`single-pricing-area ${
+                      activePlan === "gold" ? "active" : ""
+                    }`}
                     onClick={() => setActivePlan("gold")}
                     style={{
-                      width: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      height: '100%'
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      height: "100%",
                     }}
                   >
                     <div className="pricing-head">
@@ -982,19 +1001,30 @@ export default function HomePage(): React.ReactElement {
                       <h2 className="price">₹10/-</h2>
                       <p>Per Prescription</p>
                     </div>
-                    <div className="body" style={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
-
+                    <div
+                      className="body"
+                      style={{
+                        flex: "1",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
                       <div className="single-check">
                         <Check className="check-icon" />
                         <span>Everything on Professional Plan</span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Unlimited Patient-Doctor communication via WhatsApp.</span>
+                        <span>
+                          Unlimited Patient-Doctor communication via WhatsApp.
+                        </span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
-                        <span>Automatic WhatsApp language translation(English - Any India Language)</span>
+                        <span>
+                          Automatic WhatsApp language translation(English - Any
+                          India Language)
+                        </span>
                       </div>
                       <div className="single-check">
                         <Check className="check-icon" />
@@ -1008,7 +1038,7 @@ export default function HomePage(): React.ReactElement {
                         <Check className="check-icon" />
                         <span>Priority Support within 2 hours.</span>
                       </div>
-                      <div style={{ marginTop: 'auto' }}>
+                      <div style={{ marginTop: "auto" }}>
                         <a href="#" className="rts-btn btn-primary">
                           Booking Now
                         </a>
@@ -1118,13 +1148,13 @@ export default function HomePage(): React.ReactElement {
                     loading="lazy"
                   />
                   <Image
-                src="/assets/images/a.png"
-                alt="Vaidya Barta Logo"
-                className="mobile-logo"
-                width={200}
-                height={200}
-                priority
-              />
+                    src="/assets/images/a.png"
+                    alt="Vaidya Barta Logo"
+                    className="mobile-logo"
+                    width={200}
+                    height={200}
+                    priority
+                  />
                 </div>
               </div>
               <div className="col-lg-12">
@@ -1133,7 +1163,8 @@ export default function HomePage(): React.ReactElement {
                     <h6 className="title">Contact Information</h6>
                     <div className="body">
                       <address className="location">
-                        Sector-V Salt Lake City, Kolkata, West Bengal 700091
+                        Regus - Tower 1, Globsyn, Block - EP, Sector-V Salt
+                        Lake, Kolkata, West Bengal 700091
                       </address>
                       <a
                         className="under-line-btn"
@@ -1228,17 +1259,8 @@ export default function HomePage(): React.ReactElement {
             <div className="row">
               <div className="col-lg-12">
                 <div className="copyright-area-inner">
-                  Copyright © Designed &amp; Developed by{" "}
-                  <Link
-                    className="under-line-btn"
-                    href="https://dataluminous.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit DataLuminous website"
-                  >
-                    DataLuminous
-                  </Link>{" "}
-                  {currentYear}
+                  © {currentYear} YEM Software Innovations Pvt. Ltd. All rights
+                  reserved.
                 </div>
               </div>
             </div>

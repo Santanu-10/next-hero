@@ -407,81 +407,119 @@ export default function TermsConditions() {
             communicated to us using the contact information provided on this
             website:
           </p>
-          <div
-            style={{
-              backgroundColor: "#f7fafc",
-              padding: "25px",
-              borderRadius: "12px",
-              border: "1px solid #e2e8f0",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-            }}
-          >
-            <address style={{ fontStyle: "normal", fontSize: "1.1rem" }}>
-              <p
-                style={{
-                  marginBottom: "10px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
-                  Email:
-                </strong>
-                <Link
-                  href="mailto:help@vaidyabarta.com"
-                  style={{
-                    color: "#4299e1",
-                    textDecoration: "none",
-                    fontWeight: 600,
-                  }}
-                >
-                  help@vaidyabarta.com
-                </Link>
-              </p>
-              <p
-                style={{
-                  marginBottom: "10px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
-                  Phone:
-                </strong>
-                <Link
-                  href="tel:+919831036295"
-                  style={{
-                    color: "#4299e1",
-                    textDecoration: "none",
-                    fontWeight: 600,
-                  }}
-                >
-                  +91 9831036295
-                </Link>
-              </p>
-              <p
-                style={{
-                  marginBottom: "10px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
-                  Hours:
-                </strong>
-                <span>Monday - Friday (9:00 - 18:00)</span>
-              </p>
-              <p style={{ display: "flex", alignItems: "flex-start" }}>
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
-                  Address:
-                </strong>
-                <span>
-                  25, FL - 2B, FLR - 2ND, Kolkata RIFLE RANGE ROAD, Kolkata,
-                  India
-                </span>
-              </p>
-            </address>
-          </div>
+         <div
+  style={{
+    backgroundColor: "#f7fafc",
+    padding: "16px",
+    borderRadius: "12px",
+    border: "1px solid #e2e8f0",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+  }}
+>
+  <address style={{ fontStyle: "normal", fontSize: "1rem" }}>
+    <div
+      style={{
+        marginBottom: "12px",
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+      }}
+    >
+      <strong
+        style={{
+          minWidth: "100px",
+          color: "#2d3748",
+          marginRight: "10px",
+        }}
+      >
+        Email:
+      </strong>
+      <Link
+        href="mailto:help@vaidyabarta.com"
+        style={{
+          color: "#4299e1",
+          textDecoration: "none",
+          fontWeight: 600,
+          flex: 1,
+        }}
+      >
+        help@vaidyabarta.com
+      </Link>
+    </div>
+
+    <div
+      style={{
+        marginBottom: "12px",
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+      }}
+    >
+      <strong
+        style={{
+          minWidth: "100px",
+          color: "#2d3748",
+          marginRight: "10px",
+        }}
+      >
+        Phone:
+      </strong>
+      <Link
+        href="tel:+919831036295"
+        style={{
+          color: "#4299e1",
+          textDecoration: "none",
+          fontWeight: 600,
+          flex: 1,
+        }}
+      >
+        +91 9831036295
+      </Link>
+    </div>
+
+    <div
+      style={{
+        marginBottom: "12px",
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+      }}
+    >
+      <strong
+        style={{
+          minWidth: "100px",
+          color: "#2d3748",
+          marginRight: "10px",
+        }}
+      >
+        Hours:
+      </strong>
+      <span style={{ flex: 1 }}>Monday - Friday (9:00 - 18:00)</span>
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "flex-start",
+      }}
+    >
+      <strong
+        style={{
+          minWidth: "100px",
+          color: "#2d3748",
+          marginRight: "10px",
+        }}
+      >
+        Address:
+      </strong>
+      <span style={{ flex: 1 }}>
+        25, FL - 2B, FLR - 2ND, Kolkata RIFLE RANGE ROAD, Kolkata, India
+      </span>
+    </div>
+  </address>
+</div>
+
         </section>
       </main>
 
@@ -519,8 +557,7 @@ export default function TermsConditions() {
           Back to Top
         </button>
         <p style={{ color: "#718096", fontSize: "1rem", fontWeight: 500 }}>
-          © {new Date().getFullYear()} YEM SOFTWARE INNOVATIONS PRIVATE LIMITED.
-          All rights reserved.
+          © {new Date().getFullYear()} YEM Software Innovations Pvt. Ltd. All rights reserved.
         </p>
       </footer>
     </div>

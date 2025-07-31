@@ -514,65 +514,82 @@ export default function PrivacyPolicy() {
           </p>
         </section>
 
-        <section style={{ marginBottom: "40px" }}>
+        <section style={{ marginBottom: "40px", padding: "0 16px" }}>
           <h2
             style={{
-              fontSize: "2rem",
+              fontSize: "1.8rem",
               marginBottom: "20px",
               color: "#2b6cb0",
               fontWeight: 700,
               borderLeft: "4px solid #4299e1",
-              paddingLeft: "15px",
+              paddingLeft: "12px",
             }}
           >
             Grievance Officer
           </h2>
-          {/* <p style={{ marginBottom: "20px", fontSize: "1.1rem" }}>
-            If you have questions about this Privacy Policy, please contact us
-            at:
-          </p> */}
+
           <div
             style={{
               backgroundColor: "#f7fafc",
-              padding: "25px",
+              padding: "20px",
               borderRadius: "12px",
               border: "1px solid #e2e8f0",
               boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
-            <address style={{ fontStyle: "normal", fontSize: "1.1rem" }}>
-              <p
+            <address style={{ fontStyle: "normal", fontSize: "1rem" }}>
+              <div
                 style={{
-                  marginBottom: "10px",
+                  marginBottom: "12px",
                   display: "flex",
-                  alignItems: "center",
+                  flexWrap: "wrap",
                 }}
               >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
+                <strong
+                  style={{
+                    minWidth: "140px",
+                    color: "#2d3748",
+                    marginRight: "10px",
+                  }}
+                >
                   Name of the Officer:
                 </strong>
-                <span> Ashik ur Rahman</span>
-              </p>
-              <p
+                <span style={{ flex: 1 }}>Ashik ur Rahman</span>
+              </div>
+
+              <div
                 style={{
-                  marginBottom: "10px",
+                  marginBottom: "12px",
                   display: "flex",
-                  alignItems: "center",
+                  flexWrap: "wrap",
                 }}
               >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
+                <strong
+                  style={{
+                    minWidth: "140px",
+                    color: "#2d3748",
+                    marginRight: "10px",
+                  }}
+                >
                   Designation:
                 </strong>
-                <span>Manager</span>
-              </p>
-              <p
+                <span style={{ flex: 1 }}>Manager</span>
+              </div>
+
+              <div
                 style={{
-                  marginBottom: "10px",
+                  marginBottom: "12px",
                   display: "flex",
-                  alignItems: "center",
+                  flexWrap: "wrap",
                 }}
               >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
+                <strong
+                  style={{
+                    minWidth: "140px",
+                    color: "#2d3748",
+                    marginRight: "10px",
+                  }}
+                >
                   Phone Number:
                 </strong>
                 <Link
@@ -581,44 +598,68 @@ export default function PrivacyPolicy() {
                     color: "#4299e1",
                     textDecoration: "none",
                     fontWeight: 600,
+                    flex: 1,
                   }}
                 >
                   +91 9831689316
                 </Link>
-              </p>
-              <p
+              </div>
+
+              <div
                 style={{
-                  marginBottom: "10px",
+                  marginBottom: "12px",
                   display: "flex",
-                  alignItems: "center",
+                  flexWrap: "wrap",
                 }}
               >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
+                <strong
+                  style={{
+                    minWidth: "140px",
+                    color: "#2d3748",
+                    marginRight: "10px",
+                  }}
+                >
                   Hours:
                 </strong>
-                <span>Monday - Friday (9:00 - 18:00)</span>
-              </p>
-              <p
+                <span style={{ flex: 1 }}>Monday - Friday (9:00 - 18:00)</span>
+              </div>
+
+              <div
                 style={{
-                  marginBottom: "10px",
+                  marginBottom: "12px",
                   display: "flex",
-                  alignItems: "center",
+                  flexWrap: "wrap",
                 }}
               >
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
+                <strong
+                  style={{
+                    minWidth: "140px",
+                    color: "#2d3748",
+                    marginRight: "10px",
+                  }}
+                >
                   Company Name:
                 </strong>
-                <span>YEM SOFTWARE INNOVATIONS PRIVATE LIMITED</span>
-              </p>
-              <p style={{ display: "flex", alignItems: "flex-start" }}>
-                <strong style={{ minWidth: "60px", color: "#2d3748" }}>
+                <span style={{ flex: 1 }}>
+                  YEM SOFTWARE INNOVATIONS PRIVATE LIMITED
+                </span>
+              </div>
+
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <strong
+                  style={{
+                    minWidth: "140px",
+                    color: "#2d3748",
+                    marginRight: "10px",
+                  }}
+                >
                   Address:
                 </strong>
-                <span>
+                <span style={{ flex: 1 }}>
                   25, FL - 2B, FLR - 2ND, Kolkata RIFLE RANGE ROAD, Kolkata,
                   India
                 </span>
-              </p>
+              </div>
             </address>
           </div>
         </section>
@@ -658,8 +699,8 @@ export default function PrivacyPolicy() {
           Back to Top
         </button>
         <p style={{ color: "#718096", fontSize: "1rem", fontWeight: 500 }}>
-          © {new Date().getFullYear()} YEM SOFTWARE INNOVATIONS PRIVATE LIMITED.
-          All rights reserved.
+          © {new Date().getFullYear()} YEM Software Innovations Pvt. Ltd. All
+          rights reserved.
         </p>
       </footer>
     </div>

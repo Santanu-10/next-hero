@@ -4626,7 +4626,6 @@ textarea:-ms-input-placeholder {
   .menu-btn rect {
     fill: #fff;
   }
- 
 }
 
 .submenu.parent-nav > li {
@@ -6199,9 +6198,7 @@ header .rts-btn {
   header .rts-btn {
     padding: 10px 20px;
   }
-  .rts-btn {
-    font-size: 14px;
-  }
+
   .header-wrapper-1 .logo {
     padding: 15px 10px;
   }
@@ -6211,7 +6208,7 @@ header .rts-btn {
   .mobile-logo {
     display: block;
   }
-   .subscribe-area-start {
+  .subscribe-area-start {
     justify-content: center;
   }
 }
@@ -6419,5 +6416,11 @@ header .rts-btn {
   }
   .single-pricing-area .pricing-head span {
     font-size: 16px;
+  }
+  .rts-btn {
+    font-size: 14px;
+  }
+  .header-wrapper-1 .header-right {
+    gap: 5px;
   }
 }
