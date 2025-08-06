@@ -192,11 +192,29 @@ export default function RootLayout({
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+
+        {/* Brevo Conversations */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d, w, c) {
+                  w.BrevoConversationsID = '6870cf3202f8022380068149';
+                  w[c] = w[c] || function() {
+                      (w[c].q = w[c].q || []).push(arguments);
+                  };
+                  var s = d.createElement('script');
+                  s.async = true;
+                  s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+                  if (d.head) d.head.appendChild(s);
+              })(document, window, 'BrevoConversations');
+            `,
+          }}
+        />
       </head>
       <body>
         {/* Skip to main content for accessibility */}
-        <a
-          href="#main-content"
+        
+        <a href="#main-content"
           className="skip-to-main sr-only sr-only-focusable"
         >
           Skip to main content
@@ -217,6 +235,7 @@ export default function RootLayout({
           as="image"
           type="image/avif"
         />
+        
       </body>
     </html>
   );

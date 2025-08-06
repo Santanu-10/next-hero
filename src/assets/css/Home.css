@@ -5712,7 +5712,7 @@ header .rts-btn {
   display: block;
   max-width: max-content;
   margin: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
 }
 
 .request-appoinemnt-area-main-wrapper .title {
@@ -6200,7 +6200,7 @@ header .rts-btn {
   }
 
   .header-wrapper-1 .logo {
-    padding: 15px 10px;
+    padding: 15px 18px;
   }
   .desktop-logo {
     display: none;
@@ -6215,7 +6215,7 @@ header .rts-btn {
 /* Scroll To Top Button */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 30px;
   opacity: 0;
   visibility: hidden;

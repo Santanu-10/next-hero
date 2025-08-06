@@ -80,7 +80,7 @@ const SERVICES: Service[] = [
   },
   {
     icon: "/assets/images/notification.png",
-    title: "Chat with Patients in One Place",
+    title: "Chat with Patients in One Place –  Privacy Protected  ",
     description:
       "Respond to patient messages directly from Vaidya Barta. No need to switch apps or check your phone.",
   },
@@ -89,6 +89,12 @@ const SERVICES: Service[] = [
     title: "Convert Paper Records to Appointments",
     description:
       "Easily upload handwritten patient lists—Vaidya Barta smartly converts them into digital appointments in a few clicks.",
+  },
+  {
+    icon: "/assets/images/med.png",
+    title: "Alternatives brands & Pricing – 1000+ Pharma Co. ",
+    description:
+      "Evaluate alternatives, brands, and pricing from over 1,000 pharmaceutical companies for informed and cost-effective decisions.",
   },
 ];
 
@@ -147,6 +153,50 @@ const FAQS: FAQ[] = [
     question: "Can I use Vaidya Barta on my Laptop, Mobile, Tablet?",
     answer:
       "Yes! Vaidya Barta is a cloud-based platform accessible from laptops, mobiles, and tablets, allowing you to manage your clinic from anywhere. To Start with Doctors are requested to use on laptop/desktop and clinic assistants on mobile.",
+  },
+  {
+    id: "collapseSix",
+    question: "Do I need to install Software? ",
+    answer:
+      "No software installation is required. Our All-in-One platform is Cloud based solutions. You just need a web browser (like Chrome) to access the software. Anytime , anywhere – always. ",
+  },
+  {
+    id: "collapseSeven",
+    question: "Can I do self-register?  ",
+    answer:
+      "Yes, you can register and add clinic details yourself online.  It just takes 5 minutes to onboard and configure your clinic. Everything is self-serviced. Still if you need help, we are at your service.  ",
+  },
+  {
+    id: "collapseEight",
+    question: "How Patient can book an appointment?",
+    answer: (
+      <>
+        Patients can easily search and find expert doctors, clinic details, and
+        real-time availability. With our mobile-friendly website, they can make
+        online bookings instantly. Your clinic profile and timings are easily
+        discoverable at:{" "}
+        <Link
+          href="https://booking.vaidyabarta.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "#615EFC" }}
+        >
+          booking.vaidyabarta.com
+        </Link>
+      </>
+    ),
+  },
+  {
+    id: "collapseNine",
+    question: "Do I need to use multiple app for clinic workflow?",
+    answer:
+      "No, it is All-in-One single Cloud Based Web App. Same web app will be used by Doctor and Clinic Assistant to manage workflow. Clinic assistant will have access to only required features. ",
+  },
+  {
+    id: "collapseTen",
+    question: "How my privacy is maintained during communication? ",
+    answer:
+      "Patient would be able to send message, report via WhatsApp only after Patient ID &  OTP verification.  They would be sending reports to a single, centralized WhatsApp number only. All messages and reports will be stored and visible to doctor on web app. Doctor can review, reply to these messages.  Doctors message will be automatically converted from English to Patient’s language for better understanding.  ",
   },
 ];
 
@@ -340,7 +390,7 @@ const Header: React.FC<{
                 priority
               />
               <Image
-                src="/assets/images/a.png"
+                src="/assets/images/main_logo.png"
                 alt="Vaidya Barta Logo"
                 className="mobile-logo"
                 width={150}
@@ -720,10 +770,9 @@ export default function HomePage(): React.ReactElement {
                 <div className="title-wrapper-left">
                   <span className="pre wow fadeInUp">All Features</span>
                   <h2 className="title wow fadeInUp">
-                    We offer a comprehensive
-                    <br />
-                    range of medical <br />
-                    services.
+                    Built for Indian doctors, with <br />
+                    features tailored for
+                    <br /> Indian patients
                   </h2>
                   <ul className="feature-list">
                     <li>
@@ -1068,10 +1117,17 @@ export default function HomePage(): React.ReactElement {
                     </h2>
                   </div>
                   <p className="disc">
-                    Our team of dedicated and highly skilled doctors is at the
-                    heart of our commitment to providing exceptional medical
-                    care. Each member of our team brings a wealth of knowledge,
-                    experience.
+                    Patients can easily search and find expert doctors, clinic
+                    details, and real-time availability. With our
+                    mobile-friendly website, they can make online bookings
+                    instantly. Your clinic profile and timings are easily
+                    discoverable at:{" "}
+                    <Link
+                      href="https://booking.vaidyabarta.com"
+                      style={{ textDecoration: "none" }}
+                    >
+                      booking.vaidyabarta.com
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -1118,7 +1174,13 @@ export default function HomePage(): React.ReactElement {
             <div className="row">
               <div className="col-lg-12">
                 <div className="request-appoinemnt-area-main-wrapper radious-0 bg_image rts-section-gap">
-                  <span className="pre">Try For Free</span>
+                  <Link
+                    href="https://dr.vaidyabarta.com/doctor-login"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <span className="pre ">Try For Free</span>
+                  </Link>
+
                   <h2 className="title">Request To Use Our Application</h2>
                   <Link
                     href="https://dr.vaidyabarta.com/doctor-login"
@@ -1148,7 +1210,7 @@ export default function HomePage(): React.ReactElement {
                     loading="lazy"
                   />
                   <Image
-                    src="/assets/images/a.png"
+                    src="/assets/images/main_logo.png"
                     alt="Vaidya Barta Logo"
                     className="mobile-logo"
                     width={200}
@@ -1212,29 +1274,15 @@ export default function HomePage(): React.ReactElement {
                     <nav className="body">
                       <ul className="nav-bottom">
                         <li>
-                          <Link
-                            href="/privacy-policy"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Privacy Policy
-                          </Link>
+                          <Link href="/privacy-policy">Privacy Policy</Link>
                         </li>
                         <li>
-                          <Link
-                            href="/terms-conditions"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <Link href="/terms-conditions">
                             Terms & Conditions
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            href="/refund-cancellation"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <Link href="/refund-cancellation">
                             Refund & Cancellation
                           </Link>
                         </li>
