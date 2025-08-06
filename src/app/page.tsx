@@ -94,7 +94,7 @@ const SERVICES: Service[] = [
     icon: "/assets/images/med.png",
     title: "Alternatives brands & Pricing – 1000+ Pharma Co. ",
     description:
-      "Evaluate alternatives, brands, and pricing from over 1,000 pharmaceutical companies for informed and cost-effective decisions.",
+      "Evaluate alternatives, brands and pricing from over 1,000 pharmaceutical companies for informed and cost-effective decisions.",
   },
 ];
 
@@ -168,23 +168,9 @@ const FAQS: FAQ[] = [
   },
   {
     id: "collapseEight",
-    question: "How Patient can book an appointment?",
-    answer: (
-      <>
-        Patients can easily search and find expert doctors, clinic details, and
-        real-time availability. With our mobile-friendly website, they can make
-        online bookings instantly. Your clinic profile and timings are easily
-        discoverable at:{" "}
-        <Link
-          href="https://booking.vaidyabarta.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: "none", color: "#615EFC" }}
-        >
-          booking.vaidyabarta.com
-        </Link>
-      </>
-    ),
+    question: "How can a Patient book an appointment?",
+    answer:
+      "Patients can easily search and find expert doctors, clinic details, and real-time availability. With our mobile-friendly website, they can make online bookings instantly. Your clinic profile and timings are easily discoverable at: booking.vaidyabarta.com",
   },
   {
     id: "collapseNine",
@@ -1118,10 +1104,9 @@ export default function HomePage(): React.ReactElement {
                   </div>
                   <p className="disc">
                     Patients can easily search and find expert doctors, clinic
-                    details, and real-time availability. With our
-                    mobile-friendly website, they can make online bookings
-                    instantly. Your clinic profile and timings are easily
-                    discoverable at:{" "}
+                    details and real-time availability. With our mobile-friendly
+                    website, they can make online bookings instantly. Your
+                    clinic profile and timings are easily discoverable at:{" "}
                     <Link
                       href="https://booking.vaidyabarta.com"
                       style={{ textDecoration: "none" }}
