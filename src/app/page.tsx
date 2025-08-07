@@ -333,11 +333,11 @@ const MobileSidebar: React.FC<{
               Pricing
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="#doctors" className="main" onClick={onClose}>
               Our Doctors
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="#faq" className="main" onClick={onClose}>
               FAQ
@@ -400,9 +400,9 @@ const Header: React.FC<{
                   <li className="main-nav">
                     <Link href="#all-plans">Pricing</Link>
                   </li>
-                  <li className="main-nav">
+                  {/* <li className="main-nav">
                     <Link href="#doctors">Our Doctors</Link>
-                  </li>
+                  </li> */}
                   <li className="main-nav">
                     <Link href="#faq">FAQ</Link>
                   </li>
@@ -1088,7 +1088,7 @@ export default function HomePage(): React.ReactElement {
         {/* Pricing Section */}
 
         {/* Doctors Section */}
-        <section
+        {/* <section
           id="doctors"
           className="team-style-wrapper bg-light rts-section-gap"
         >
@@ -1123,12 +1123,12 @@ export default function HomePage(): React.ReactElement {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* FAQ Section */}
         <section
           id="faq"
-          className="rts-faq-area rts-section-gapBottom rts-section-gap"
+          className="rts-faq-area rts-section-gapBottom "
         >
           <div className="container">
             <div className="row">
@@ -1242,9 +1242,9 @@ export default function HomePage(): React.ReactElement {
                         <li>
                           <Link href="#all-plans">Pricing</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link href="#doctors">Our Doctors</Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link href="#faq">FAQ</Link>
                         </li>
